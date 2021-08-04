@@ -1,0 +1,151 @@
+﻿#form-lKGCM5p5w3Jn {
+	width: calc(100% - 20px);
+}
+
+#form-lKGCM5p5w3Jn ul {
+	padding-left: 1em;
+	list-style-type: disc;
+}
+
+#form-lKGCM5p5w3Jn label {
+	display: block;
+	margin-bottom: 6px;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-text-input {
+	width: 100%;
+	display: block;
+	margin-bottom: 0.5em;
+}
+#form-lKGCM5p5w3Jn textarea {
+	width: 100%;
+	height: 250px;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-text-input-wide {
+	width: 100%;
+	max-width: 500px;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq {
+	/* margin-bottom: 3em; */
+	padding: 1em 0;
+	/* border-top: 1px solid #000; */
+	border-bottom: 1px solid #000;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-toggle-view {
+	text-align: right;
+}
+#form-lKGCM5p5w3Jn .savvi-faq-toggle-view {
+	border: 1px solid #000;
+	padding: 3px;
+	float: right;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-overlay {
+	position: fixed;
+	left: 160px;
+	top: 0;
+	width: calc(100% - 160px);
+	height: 100%;
+	background: rgba(0,0,0,0.85);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.25s;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-overlay.show, #form-lKGCM5p5w3Jn .savvi-faq-overlay.show .savvi-faq-modal {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.25s;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-overlay.show .savvi-faq-modal {transform: translate(-50%,0px);}
+
+#form-lKGCM5p5w3Jn .savvi-faq-modal {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.25);
+	background: rgba(255,255,255,0.95);
+	padding: 0 1em;
+	width: calc(100% - 40px);
+	max-width: 800px;
+	box-sizing: border-box;
+	transform: translate(-50%,-20px);
+	visibility: hidden;
+	opacity: 0;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-modal input[type="text"], #form-lKGCM5p5w3Jn .savvi-faq-modal select {
+	width: 100%;
+	max-width: none;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-close:before, #form-lKGCM5p5w3Jn .savvi-faq-close:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 1px);
+	width: 100%;
+	height: 2px;
+	background: #000;
+}
+#form-lKGCM5p5w3Jn .savvi-faq-close:before {transform: rotate(45deg);}
+#form-lKGCM5p5w3Jn .savvi-faq-close:after {transform: rotate(-45deg);}
+
+#form-lKGCM5p5w3Jn .savvi-faq-delete {
+	color: #e00000;
+	border-color: #e00000;
+}
+
+#form-lKGCM5p5w3Jn #savvi-options-info .notice {
+	margin: 0 0 1em 0;
+}
+
+#form-lKGCM5p5w3Jn .savvi-faq-loading {
+	position: fixed;
+	width: calc(100% - 160px);
+	height: 100%;
+	right: 0;
+	top: 0; 
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	background: rgba(24,25,24,0.95);
+	transition: opacity 0.35s, visibility 0.35s;
+}
+#form-lKGCM5p5w3Jn .savvi-faq-loading:after {
+	content: '';
+	display: block;
+	position: absolute;
+}
+#form-lKGCM5p5w3Jn .savvi-faq-loading:after {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	border: 6px solid #EFEFE8;
+	border-color: #EFEFE8 transparent #EFEFE8 transparent;
+	left: calc(50% - 32px);
+	top: calc(50% - 32px);
+	animation: bk-map-loading 1.2s linear infinite;
+}
+#form-lKGCM5p5w3Jn .savvi-faq-loading.show {
+	opacity: 1;
+	visibility: visible;
+}
+@keyframes bk-map-loading {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}

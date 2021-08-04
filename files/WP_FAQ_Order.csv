@@ -1,0 +1,6 @@
+a92de605-8d58-4353-8b03-e6a55ec4375e,WP FAQ Order,This is a stem or order FAQs by interactions
+GET Time,POST Time,1f714ef3-ecee-4cb4-bb32-62ba2e992fa2,DecisionID,21c6c2ed-8e92-4cc8-a458-ad228e4f6753,ba77e611-6df0-463a-828e-9cd49a178ff8,b11cc1c0-9bea-42ca-8f94-3ccc590fce0d,bdb0b349-44ec-49dd-98c7-a944fe28de4f
+Time of Get Call,Time of Post Call,Decision Label: wp_faq_order_DU,Decision ID: wp_faq_order_DU,Performance: ClickEvent,Performance: FAQPosition,Influencer: DeviceType,Influencer: ReferringURL
+datetime (YYYY-MM-DD HH:MM:SS) or empty,datetime (YYYY-MM-DD HH:MM:SS) or empty,Text or empty,String or empty,Number or empty,Number or empty,Text,Text
+,,,,,,,
+,,,,,,,
