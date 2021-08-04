@@ -262,9 +262,13 @@ class SavviFAQ{
 		$unordered_questions = SavviFAQ::get_faqs();
 		$questions = [];
 
-		$server_output = $this->get_stem_event_id();
+		$container_url = $this->$settings['container_url'];
+		
+		if($container_url){
+			$server_output = $this->get_stem_event_id();
+		}
 
-		if($server_output->decision){
+		if($container_url && $server_output->decision){
 			foreach($server_output->decision as $k=>$v){
 				//unordered questions come in as a zero-based array; match them up to returned faq ID, which is 1-based:
 				$adjust_id = intval($v->id) - 1;
