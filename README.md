@@ -1,2 +1,4 @@
 # savvi-faq
-The Savvi FAQ plugin allows you to create a list of collapsible FAQs to display almost anywhere on your Wordpress site. When integrated with a Savvi AI Stem the plugin utilizes machine learning to display the FAQs in the most-clicked order, making sure your visitors see the most applicable FAQs first.
+The Savvi way to build an FAQ page.
+
+Introducing a little FAQ plugin powered by big machine learning. You can now add a Savvi stem-powered collapsible list of FAQs to any part of your Wordpress site. It’s easy. Add your questions. Add you answers. Input your stem ID then  sit back and let SAVVI deliver relevant results based on real data. Ok, there’s a few mores steps below, but this sounds so good. And it’s AI in less than an afternoon.
