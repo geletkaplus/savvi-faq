@@ -192,19 +192,28 @@ class SavviFAQ{
 		echo '<link rel="stylesheet" href="'.plugins_url( 'css/savvi-faq-settings.css', __FILE__ ).'">';
 		?>
 		<form id="form-<?=self::INIT?>">
-			<h1>Savvi FAQ Settings</h1>
-		
-			<p>The Savvi FAQ plugin allows you add a collapsible list of FAQs to any part of your Wordpress site. However, to get the full benefits of this plugin you should have a Savvi AI account. [Some explanation of Savvi AI, using machine learning to order the FAQs in the most-clicked order, etc.] </p>
+			<h1>Savvi FAQ</h1>
 			
-			<ul>
-				<li>Add questions to the FAQs using the controls below. You can have up to 12 questions.</li>
-				<li><a href="<?=plugins_url( 'files/WP_FAQ_Order.csv', __FILE__ )?>" download="WP_FAQ_Order.csv">Download this Savvi Stem template.</a></li>
-				<li>Create a Savvi AI account.</li>
-				<li>Create a new Stem in your Savvi AI account and upload the template. [Probably need some more directions from the Savvi team for this.]</li>
-				<li>Input the newly created Stem's client container URL in the Settings at the bottom of this page and click the "Save" button.</li>
-				<li>You're all set! You can embed the FAQs anywhere on your Wordpress site using the shortcode <code>[savvi_faq]</code>.</li>
-			</ul>
+			<p>The Savvi way to build an FAQ page.</p>
 
+			<p>Introducing a little FAQ plugin powered by big machine learning. You can now add a Savvi Stem-powered collapsible list of FAQs to any part of your Wordpress site. It&rsquo;s easy. Add your questions. Add you answers. Input your Stem ID then  sit back and let SAVVI deliver relevant results based on real data. Ok, there&rsquo;s a few mores steps below, but this sounds so good. And it&rsquo;s AI in less than an afternoon.</p>
+
+			<p>Getting started is easy:</p>
+
+			<ol>
+				<li>Add your questions to the FAQs using the controls below. You get up to 12 questions right now.</li>
+				<li><a href="<?=plugins_url( 'files/WP_FAQ_Order.csv', __FILE__ )?>" download="WP_FAQ_Order.csv">Download this Savvi Stem template</a>. You'll need it later.</li>
+				<li>Make a Savvi AI account. They're in beta, but hit up their site every day.</li>
+				<li>Create a new Stem in your Savvi AI account and upload the template. It&rsquo;s so easy.</li>
+				<li>Paste the newly created Stem&rsquo;s client container URL on this page.</li>
+				<li>Hit Save. Always important.</li>
+				<li>Embed the FAQs anywhere on your Wordpress site using the shortcode <code>[savvi_faq]</code>.</li>
+				<li>Watch your Stem grow.</li>
+				<li>Now the important part. Tell your friends you implemented AI. </li>
+			</ol>
+
+			<p>Finally. While this plugin is built for SAVVI AI by a savvy development partner, it still works as a generic FAQ module.</p>
+		
 			<h2>FAQs</h2>
 			<? if(count($posts) < self::MAX_FAQ_COUNT){?>
 			<p><input type="button" class="button" value="Add FAQ" data-savvi-faq-action="new-faq-modal"></p>
@@ -215,7 +224,7 @@ class SavviFAQ{
 			<div id="savvi-faq"><? $savviFAQListTable->display();?></div>
 		
 			<h2>Settings</h2>
-			<p>[Some explanation of Savvi AI and where to find the client container URL, etc.]</p>
+			<!-- <p>[Some explanation of Savvi AI and where to find the client container URL, etc.]</p> -->
 			
 			<div id="savvi-options-info"></div>
 			
@@ -228,7 +237,7 @@ class SavviFAQ{
  -->
 			<fieldset>
 				<label for="savvi-faq-container-url">Savvi Stem client container URL:</label>
-				<input name="savvi-faq-container-url" type="text" id="savvi-faq-container-url" value="<?=$this->$settings['container_url']?>" class="savvi-faq-text-input-wide">
+				<input name="savvi-faq-container-url" type="text" id="savvi-faq-container-url" value="<?=$this->$settings['container_url']?>" class="savvi-faq-text-input-wide" placeholder="https://1a23-bcd4567890e1.fg.savvi-ai.com/stem/wp_faq_order">
 			</fieldset>
 		
 			<p><input type="button" class="button button-primary" value="Save Options" data-savvi-faq-action="save"></p>
