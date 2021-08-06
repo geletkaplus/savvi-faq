@@ -66,7 +66,7 @@ jQuery(function(){
 				trace(result.response);
 				
 				//update the event id with the returned value:
-				$('[data-savvi-faq-event-id]').attr('data-savvi-faq-event-id', result.stemeventid);
+				//$('[data-savvi-faq-event-id]').attr('data-savvi-faq-event-id', result.stemeventid);
 			},
 			error: null,
 			dataType: 'text'
