@@ -68,7 +68,7 @@ class SavviFAQ{
 		$faq_label = $_POST['faq_label'];
 		$interaction = ($_POST['interaction'] == 'close') ? 'close' : 'open';
 		$order = intval($_POST['order']);
-		$event_id = $_POST['event_id'];
+		//$event_id = $_POST['event_id'];
 		
 		$container_url = $this->$settings['container_url'];
 		
@@ -77,6 +77,8 @@ class SavviFAQ{
 		}
 		
 		if($faq_id && $interaction == 'open'){
+			$event_id = $this->get_stem_event_id()->stemeventid;
+		
 			$ch = curl_init();
 
 			$data = [
@@ -87,7 +89,7 @@ class SavviFAQ{
 				'stemeventid'=>$event_id,
 			];
 
-			curl_setopt($ch, CURLOPT_URL, 'https://8c80-efb5986285f2.cc.savvi-ai.com/stem/wp_faq_order');
+			curl_setopt($ch, CURLOPT_URL, $container_url);
 			curl_setopt($ch, CURLOPT_POST, 1);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
@@ -97,9 +99,9 @@ class SavviFAQ{
 
 			curl_close ($ch);
 			
-			$new_get_request = $this->get_stem_event_id();
+			//$new_get_request = $this->get_stem_event_id();
 			
-			$output = ['result'=>1, 'response'=>$server_output, 'stemeventid'=>$new_get_request->stemeventid];
+			$output = ['result'=>1, 'response'=>$server_output];
 			
 			exit(json_encode($output));
 		}
@@ -336,6 +338,12 @@ class SavviFAQ{
 	/* PRIVATE METHODS */
 
 	private function get_stem_event_id(){
+		$container_url = $this->$settings['container_url'];
+		
+		if(!$container_url){
+			return false;
+		}
+
 		$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 		$os_platform = 'unknown platform';
@@ -390,7 +398,7 @@ class SavviFAQ{
 
 		$ch = curl_init();
 		
-		curl_setopt($ch, CURLOPT_URL, 'https://9c08-56463ccdeb33.cc.savvi-ai.com/stem/wp_faq_order?'.$data);
+		curl_setopt($ch, CURLOPT_URL, $container_url.'?'.$data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 		return json_decode(curl_exec($ch));
