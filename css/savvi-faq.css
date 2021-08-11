@@ -1,4 +1,4 @@
-﻿.savvi-faq { background-color: transparent; padding: 2.155rem 1.5rem; border-radius: 0.85714rem; margin-bottom: 1rem; position: relative; transition: all 0.35s; }
+.savvi-faq { background-color: transparent; padding: 2.155rem 1.5rem; border-radius: 0.85714rem; margin-bottom: 1rem; position: relative; transition: all 0.35s; }
 
 .savvi-faq .savvi-toggle, .savvi-faq .savvi-click-area { width: 1.33333rem; height: 1.33333rem; right: 1.5rem; top: 45px; }
 
@@ -34,11 +34,11 @@
 
 @media (min-width: 768px) { .savvi-faq .savvi-question:after { width: 30px; height: 30px; border-width: 6px; left: calc(-2rem - 3px); top: calc(50% - 15px); } }
 
-.savvi-faq .answer { position: relative; padding-left: 1.42857rem; padding-right: 4.7619rem; font-size: 0.85714rem; color: #333333; }
+.savvi-faq .savvi-answer { position: relative; padding-left: 1.42857rem; padding-right: 4.7619rem; font-size: 0.85714rem; color: #333333; }
 
-@media (min-width: 768px) { .savvi-faq .answer { padding-right: 4.7619rem; } }
+@media (min-width: 768px) { .savvi-faq .savvi-answer { padding-right: 4.7619rem; } }
 
-.savvi-faq .answer:before { content: ''; display: block; width: 6px; height: 100%; background: #AFFC6D; position: absolute; left: 0; top: 0; }
+.savvi-faq .savvi-answer:before { content: ''; display: block; width: 6px; height: 100%; background: #AFFC6D; position: absolute; left: 0; top: 0; }
 
 .savvi-faq .savvi-toggle { position: absolute; transform: rotate(-45deg); transition: all 0.35s; }
 
